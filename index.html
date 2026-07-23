@@ -343,6 +343,15 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+    /* Single centered price layout */
+    .price-single {
+      display: flex;
+      justify-content: center;
+    }
+    .price-single .price-col {
+      width: 100%;
+      max-width: 360px;
+    }
     .price-col {
       background: transparent;
       border: 1px solid rgba(255,255,255,.18);
@@ -932,53 +941,13 @@
       </div>
     </div>
 
-    <div class="price-cols rv rv-d1">
-      <!-- Tunsori -->
+    <div class="price-single rv rv-d1">
       <div class="price-col">
-        <p class="price-col-h">Tunsori</p>
-
         <ul class="p-list">
-          <li class="p-item feat">
-            <div class="p-item-l">
-              <span class="p-nm">Tuns complet + fade</span>
-              <span class="p-nt">Cel mai popular</span>
-            </div>
-            <span class="p-pr">70 RON</span>
-          </li>
-          <li class="p-item"><span class="p-nm">Tuns simplu</span><span class="p-pr">50 RON</span></li>
-          <li class="p-item"><span class="p-nm">Tuns + styling</span><span class="p-pr">90 RON</span></li>
-          <li class="p-item"><span class="p-nm">Tuns copii (sub 12 ani)</span><span class="p-pr">40 RON</span></li>
-          <li class="p-item"><span class="p-nm">Contur / retuș</span><span class="p-pr">25 RON</span></li>
-        </ul>
-      </div>
-
-      <!-- Bărbierit -->
-      <div class="price-col">
-        <p class="price-col-h">Bărbierit</p>
-        <ul class="p-list">
-          <li class="p-item"><span class="p-nm">Bărbierit clasic</span><span class="p-pr">40 RON</span></li>
-          <li class="p-item"><span class="p-nm">Contur barbă</span><span class="p-pr">30 RON</span></li>
-          <li class="p-item"><span class="p-nm">Bărbierit + tratament</span><span class="p-pr">60 RON</span></li>
-          <li class="p-item"><span class="p-nm">Modelare mustață</span><span class="p-pr">20 RON</span></li>
-          <li class="p-item"><span class="p-nm">Design barbă completă</span><span class="p-pr">50 RON</span></li>
-        </ul>
-      </div>
-
-      <!-- Pachete -->
-      <div class="price-col">
-        <p class="price-col-h">Pachete</p>
-        <ul class="p-list">
-          <li class="p-item feat">
-            <div class="p-item-l">
-              <span class="p-nm">Pachet Complet</span>
-              <span class="p-nt">Tuns + Bărbierit + Styling</span>
-            </div>
-            <span class="p-pr">110 RON</span>
-          </li>
-          <li class="p-item"><span class="p-nm">Styling &amp; finisaj</span><span class="p-pr">30 RON</span></li>
-          <li class="p-item"><span class="p-nm">Tratament scalp</span><span class="p-pr">50 RON</span></li>
-          <li class="p-item"><span class="p-nm">Masaj facial</span><span class="p-pr">35 RON</span></li>
-          <li class="p-item"><span class="p-nm">Consultație &amp; design</span><span class="p-pr">Gratuit</span></li>
+          <li class="p-item"><span class="p-nm">Tuns modern</span><span class="p-pr">60 RON</span></li>
+          <li class="p-item feat"><span class="p-nm">Tuns + barbă</span><span class="p-pr">70 RON</span></li>
+          <li class="p-item"><span class="p-nm">Tuns clasic</span><span class="p-pr">50 RON</span></li>
+          <li class="p-item"><span class="p-nm">Tuns barbă</span><span class="p-pr">20 RON</span></li>
         </ul>
       </div>
     </div>
@@ -992,7 +961,7 @@
       <div>
         <p class="eyebrow">Galerie</p>
         <div class="rule"></div>
-        <h2 class="sec-heading">Stiluri de Tunsori</h2>
+        <h2 class="sec-heading">Galerie</h2>
       </div>
       <a href="#contact" class="btn-text rv rv-d2">
         Programează-te <span class="arr">→</span>
@@ -1036,6 +1005,12 @@
           <video class="style-video" src="./images/video_galerie6.mp4" autoplay loop muted playsinline></video>
         </div>
       </div>
+      <!-- 7 -->
+      <div class="style-card" style="grid-column: 2;">
+        <div class="style-thumb">
+          <video class="style-video" src="./images/video_galerie7.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1058,7 +1033,7 @@
         <p class="about-title rv rv-d1">Fondator &amp; Barber Principal</p>
 
         <p class="about-bio rv rv-d2">
-          Am <strong>peste 5 ani de experiență</strong> în barbering și mi-am construit reputația tuns cu tuns, client cu client. Am trecut prin cursuri serioase în România și Europa și știu ce înseamnă să lucrezi cu precizie, nu doar să tai părul.
+          Am <strong>peste 4 ani de experiență</strong> în barbering și mi-am construit reputația tuns cu tuns, client cu client. Am investit în cursuri de specialitate și știu ce înseamnă să lucrezi cu precizie, nu doar să tai părul.
         </p>
         <p class="about-bio rv rv-d2">
           Am creat Barber Studio by Patrik ca să fie locul în care fiecare detaliu contează. Folosesc instrumente premium și acord <strong>atenție reală</strong> la ce vrei tu. Rezultatul îl simți când ieși pe ușă.
@@ -1066,7 +1041,7 @@
 
         <div class="stats-grid rv rv-d3">
           <div class="stat-box">
-            <div class="stat-n" data-target="5" data-suffix="+">0</div>
+            <div class="stat-n" data-target="4" data-suffix="+">0</div>
             <div class="stat-l">Ani experiență</div>
           </div>
           <div class="stat-box">
@@ -1074,7 +1049,7 @@
             <div class="stat-l">Clienți mulțumiți</div>
           </div>
           <div class="stat-box">
-            <div class="stat-n" data-target="15" data-suffix="+">0</div>
+            <div class="stat-n" data-target="2" data-suffix="">0</div>
             <div class="stat-l">Cursuri absolvite</div>
           </div>
         </div>
@@ -1130,9 +1105,9 @@
             <div>
               <p class="c-key">Program</p>
               <div>
-                <div class="hrs-row"><span class="hrs-day">Luni – Vineri</span><span class="hrs-time">09:00 – 20:00</span></div>
-                <div class="hrs-row"><span class="hrs-day">Sâmbătă</span><span class="hrs-time">09:00 – 18:00</span></div>
-                <div class="hrs-row"><span class="hrs-day">Duminică</span><span class="hrs-time">10:00 – 16:00</span></div>
+                <div class="hrs-row"><span class="hrs-day">Luni – Vineri</span><span class="hrs-time">10:00 – 19:00</span></div>
+                <div class="hrs-row"><span class="hrs-day">Sâmbătă</span><span class="hrs-time">10:00 – 14:00</span></div>
+                <div class="hrs-row"><span class="hrs-day">Duminică</span><span class="hrs-time">Închis</span></div>
               </div>
             </div>
           </div>
@@ -1163,26 +1138,10 @@
               <label class="form-label" for="f-serviciu">Serviciu dorit</label>
               <select class="form-select" id="f-serviciu" name="serviciu" required>
                 <option value="" disabled selected>Alege serviciul…</option>
-                <optgroup label="Tunsori">
-                  <option value="Tuns complet + fade — 70 RON">Tuns complet + fade — 70 RON</option>
-                  <option value="Tuns simplu — 50 RON">Tuns simplu — 50 RON</option>
-                  <option value="Tuns + styling — 90 RON">Tuns + styling — 90 RON</option>
-                  <option value="Tuns copii (sub 12 ani) — 40 RON">Tuns copii (sub 12 ani) — 40 RON</option>
-                  <option value="Contur / retuș — 25 RON">Contur / retuș — 25 RON</option>
-                </optgroup>
-                <optgroup label="Bărbierit">
-                  <option value="Bărbierit clasic — 40 RON">Bărbierit clasic — 40 RON</option>
-                  <option value="Contur barbă — 30 RON">Contur barbă — 30 RON</option>
-                  <option value="Bărbierit + tratament — 60 RON">Bărbierit + tratament — 60 RON</option>
-                  <option value="Modelare mustață — 20 RON">Modelare mustață — 20 RON</option>
-                  <option value="Design barbă completă — 50 RON">Design barbă completă — 50 RON</option>
-                </optgroup>
-                <optgroup label="Pachete">
-                  <option value="Pachet Complet (Tuns + Bărbierit + Styling) — 110 RON">Pachet Complet (Tuns + Bărbierit + Styling) — 110 RON</option>
-                  <option value="Styling &amp; finisaj — 30 RON">Styling &amp; finisaj — 30 RON</option>
-                  <option value="Tratament scalp — 50 RON">Tratament scalp — 50 RON</option>
-                  <option value="Masaj facial — 35 RON">Masaj facial — 35 RON</option>
-                </optgroup>
+                <option value="Tuns modern — 60 RON">Tuns modern — 60 RON</option>
+                <option value="Tuns + barbă — 70 RON">Tuns + barbă — 70 RON</option>
+                <option value="Tuns clasic — 50 RON">Tuns clasic — 50 RON</option>
+                <option value="Tuns barbă — 20 RON">Tuns barbă — 20 RON</option>
               </select>
             </div>
           </div>
