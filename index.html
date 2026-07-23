@@ -406,6 +406,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
+    .style-card-last { grid-column: 2; }
     .style-card {
       position: relative; overflow: hidden;
       background: var(--slate);
@@ -830,6 +831,7 @@
       .hamburger { display: flex; }
       .price-cols { grid-template-columns: 1fr; }
       .styles-grid { grid-template-columns: repeat(2, 1fr); }
+      .style-card-last { grid-column: auto; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-photo-wrap { position: static; }
       .about-photo { aspect-ratio: 4/3; }
@@ -865,9 +867,9 @@
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
-  <a href="#preturi"  onclick="closeMob()">Prețuri</a>
-  <a href="#stiluri"  onclick="closeMob()">Stiluri</a>
   <a href="#despre"   onclick="closeMob()">Despre</a>
+  <a href="#stiluri"  onclick="closeMob()">Galerie</a>
+  <a href="#preturi"  onclick="closeMob()">Prețuri</a>
   <a href="#contact"  onclick="closeMob()">Contact</a>
 </div>
 
@@ -877,9 +879,9 @@
     <img src="./images/logo_png.png" class="nav-mark" alt="Barber Studio by Patrik">
   </a>
   <ul class="nav-links">
-    <li><a href="#preturi">Prețuri</a></li>
-    <li><a href="#stiluri">Stiluri</a></li>
     <li><a href="#despre">Despre</a></li>
+    <li><a href="#stiluri">Galerie</a></li>
+    <li><a href="#preturi">Prețuri</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="tel:+40735655578" class="nav-cta">0735 655 578</a>
@@ -930,25 +932,56 @@
   </div>
 </section>
 
-<!-- ═══ PREȚURI ════════════════════════════ -->
-<section class="section bg-alt" id="preturi" aria-label="Prețuri">
+<!-- ═══ DESPRE ══════════════════════════════ -->
+<section class="section bg-alt" id="despre" aria-label="Despre Patrik">
   <div class="container">
-    <div class="pricing-top rv">
-      <div>
-        <p class="eyebrow">Servicii</p>
-        <div class="rule"></div>
-        <h2 class="sec-heading">Prețuri</h2>
+    <div class="about-grid">
+      <div class="about-photo-wrap rv">
+        <div class="about-photo">
+          <img src="./images/patrik_portrait.png" alt="Patrik Puiut — Master Barber, Deva" loading="lazy">
+          <div class="about-photo-frame" aria-hidden="true"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="price-single rv rv-d1">
-      <div class="price-col">
-        <ul class="p-list">
-          <li class="p-item"><span class="p-nm">Tuns modern</span><span class="p-pr">60 RON</span></li>
-          <li class="p-item feat"><span class="p-nm">Tuns + barbă</span><span class="p-pr">70 RON</span></li>
-          <li class="p-item"><span class="p-nm">Tuns clasic</span><span class="p-pr">50 RON</span></li>
-          <li class="p-item"><span class="p-nm">Tuns barbă</span><span class="p-pr">20 RON</span></li>
-        </ul>
+      <div class="about-content">
+        <p class="eyebrow rv">Master Barber</p>
+        <div class="rule rv rv-d1"></div>
+        <h2 class="about-name rv rv-d1">Patrik Puiut</h2>
+        <p class="about-title rv rv-d1">Fondator &amp; Barber Principal</p>
+
+        <p class="about-bio rv rv-d2">
+          Am <strong>peste 4 ani de experiență</strong> în barbering și mi-am construit reputația tuns cu tuns, client cu client. Am investit în cursuri de specialitate și știu ce înseamnă să lucrezi cu precizie, nu doar să tai părul.
+        </p>
+        <p class="about-bio rv rv-d2">
+          Am creat Barber Studio by Patrik ca să fie locul în care fiecare detaliu contează. Folosesc instrumente premium și acord <strong>atenție reală</strong> la ce vrei tu. Rezultatul îl simți când ieși pe ușă.
+        </p>
+
+        <div class="stats-grid rv rv-d3">
+          <div class="stat-box">
+            <div class="stat-n" data-target="4" data-suffix="+">0</div>
+            <div class="stat-l">Ani experiență</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-n" data-target="500" data-suffix="+">0</div>
+            <div class="stat-l">Clienți mulțumiți</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-n" data-target="2" data-suffix="">0</div>
+            <div class="stat-l">Cursuri absolvite</div>
+          </div>
+        </div>
+
+        <div class="rv rv-d4">
+          <p class="certs-label">Certificate &amp; Diplome</p>
+          <div class="diplomas-row">
+            <div class="diploma-img">
+              <img src="./images/diploma1.png" alt="Diplomă Patrik Puiut" loading="lazy">
+            </div>
+            <div class="diploma-img">
+              <img src="./images/diploma2.png" alt="Diplomă Patrik Puiut" loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1006,7 +1039,7 @@
         </div>
       </div>
       <!-- 7 -->
-      <div class="style-card" style="grid-column: 2;">
+      <div class="style-card style-card-last">
         <div class="style-thumb">
           <video class="style-video" src="./images/video_galerie7.mp4" autoplay loop muted playsinline></video>
         </div>
@@ -1015,56 +1048,25 @@
   </div>
 </section>
 
-<!-- ═══ DESPRE ══════════════════════════════ -->
-<section class="section bg-alt" id="despre" aria-label="Despre Patrik">
+<!-- ═══ PREȚURI ════════════════════════════ -->
+<section class="section bg-alt" id="preturi" aria-label="Prețuri">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-photo-wrap rv">
-        <div class="about-photo">
-          <img src="./images/patrik_portrait.png" alt="Patrik Puiut — Master Barber, Deva" loading="lazy">
-          <div class="about-photo-frame" aria-hidden="true"></div>
-        </div>
+    <div class="pricing-top rv">
+      <div>
+        <p class="eyebrow">Servicii</p>
+        <div class="rule"></div>
+        <h2 class="sec-heading">Prețuri</h2>
       </div>
+    </div>
 
-      <div class="about-content">
-        <p class="eyebrow rv">Master Barber</p>
-        <div class="rule rv rv-d1"></div>
-        <h2 class="about-name rv rv-d1">Patrik Puiut</h2>
-        <p class="about-title rv rv-d1">Fondator &amp; Barber Principal</p>
-
-        <p class="about-bio rv rv-d2">
-          Am <strong>peste 4 ani de experiență</strong> în barbering și mi-am construit reputația tuns cu tuns, client cu client. Am investit în cursuri de specialitate și știu ce înseamnă să lucrezi cu precizie, nu doar să tai părul.
-        </p>
-        <p class="about-bio rv rv-d2">
-          Am creat Barber Studio by Patrik ca să fie locul în care fiecare detaliu contează. Folosesc instrumente premium și acord <strong>atenție reală</strong> la ce vrei tu. Rezultatul îl simți când ieși pe ușă.
-        </p>
-
-        <div class="stats-grid rv rv-d3">
-          <div class="stat-box">
-            <div class="stat-n" data-target="4" data-suffix="+">0</div>
-            <div class="stat-l">Ani experiență</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-n" data-target="500" data-suffix="+">0</div>
-            <div class="stat-l">Clienți mulțumiți</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-n" data-target="2" data-suffix="">0</div>
-            <div class="stat-l">Cursuri absolvite</div>
-          </div>
-        </div>
-
-        <div class="rv rv-d4">
-          <p class="certs-label">Certificate &amp; Diplome</p>
-          <div class="diplomas-row">
-            <div class="diploma-img">
-              <img src="./images/diploma1.png" alt="Diplomă Patrik Puiut" loading="lazy">
-            </div>
-            <div class="diploma-img">
-              <img src="./images/diploma2.png" alt="Diplomă Patrik Puiut" loading="lazy">
-            </div>
-          </div>
-        </div>
+    <div class="price-single rv rv-d1">
+      <div class="price-col">
+        <ul class="p-list">
+          <li class="p-item"><span class="p-nm">Tuns modern</span><span class="p-pr">60 RON</span></li>
+          <li class="p-item feat"><span class="p-nm">Tuns + barbă</span><span class="p-pr">70 RON</span></li>
+          <li class="p-item"><span class="p-nm">Tuns clasic</span><span class="p-pr">50 RON</span></li>
+          <li class="p-item"><span class="p-nm">Tuns barbă</span><span class="p-pr">20 RON</span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1367,7 +1369,7 @@ document.querySelectorAll('[data-target]').forEach(el => cntObs.observe(el));
       `Bună ziua! Mă numesc *${prenume} ${nume}*.\n` +
       `Doresc o programare pentru *${serviciu}*` +
       ` pe data de *${dataRo}*.\n` +
-      `Vă rog să mă contactați pentru confirmare. Mulțumesc! 🙏`;
+      `Vă rog să mă contactați pentru confirmare. Mulțumesc!`;
 
     const url = 'https://wa.me/40735655578?text=' + encodeURIComponent(msg);
     window.open(url, '_blank', 'noopener,noreferrer');
